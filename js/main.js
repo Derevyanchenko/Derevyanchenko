@@ -3,6 +3,8 @@ $(document).ready(function(){
     dots: true,
     arrows: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
@@ -12,7 +14,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          autoplay: false,
+          autoplay: true,
           arrows: false,
           dots: true
         }
@@ -23,7 +25,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: false,
-          autoplay: false,
+          autoplay: true,
           dots: true
         }
       },
@@ -33,7 +35,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          autoplay: false,
+          autoplay: true,
           dots: true
         }
       },
@@ -43,7 +45,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
-          autoplay: false,
+          autoplay: true,
           dots: true
         }
       },
@@ -68,8 +70,8 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     appendArrows: ".aside__license--arrow",
-    prevArrow: '<button class="aside__license--arrow-prev"><img src="/img/arrow-prev.svg" alt="" /></button>',
-    nextArrow: '<button class="aside__license--arrow-next"><img src="/img/arrow-next.svg" alt="" /></button>',
+    prevArrow: '<button class="aside__license--arrow-prev"><img src="/img/arrow-left.png" alt="" /></button>',
+    nextArrow: '<button class="aside__license--arrow-next"><img src="/img/arrow-right.png" alt="" /></button>',
     responsive: [
       {
         breakpoint: 1600,
@@ -77,7 +79,7 @@ $(document).ready(function(){
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          autoplay: false,
+          autoplay: true,
           arrows: true,
           dots: false
         }
@@ -133,8 +135,8 @@ $(document).ready(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     appendArrows: ".gallery__arrow",
-    prevArrow: '<button class="gallery__arrow-prev"><img src="/img/arrow-prev.svg" alt="" /></button>',
-    nextArrow: '<button class="gallery__arrow-next"><img src="/img/arrow-next.svg" alt="" /></button>',
+    prevArrow: '<button class="gallery__arrow-prev"><img src="/img/arrow-left.png" alt="" /></button>',
+    nextArrow: '<button class="gallery__arrow-next"><img src="/img/arrow-right.png" alt="" /></button>',
     responsive: [
       // {
       //   breakpoint: 1600,
@@ -218,4 +220,35 @@ $(document).ready(function(){
   // $(".main__item").mouseover(function() {
   //   $(".main__item--submenu").toggle(300);
   // });
+
+   $(".menu__toggle").click(function() {
+   $(".main__menu--wrapper ul").toggleClass("main__menu-flex");
+    $('.menu__toggle').toggleClass('menu__toggle-active');
+  });
+
+    $(".main__item-1").hover(function() {
+            $(".main__item--submenu-1").slideToggle(300);
+          });
+          $(".main__item-2").hover(function() {
+            $(".main__item--submenu-2").slideToggle(300);
+          });
+          $(".main__item-3").hover(function() {
+            $(".main__item--submenu-3").slideToggle(300);
+          });
+          $(".main__item-4").hover(function() {
+            $(".main__item--submenu-4").slideToggle(300);
+          });
+          $(".main__item-5").hover(function() {
+            $(".main__item--submenu-5").slideToggle(300);
+          });
+          $(".main__item-6").hover(function() {
+            $(".main__item--submenu-6").slideToggle(300);
+          });
+
  });
+
+ $(window).resize(function() {
+         if($(window).width() < 577 ){
+             $(".main__item--submenu").css("display", "none");
+         }
+       });
