@@ -4,9 +4,15 @@
 @import "aside";
 @import "content";
 @import "footer";
+@import "fakultet-header";
+@import "fakultet-media";
 
 // media
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .modal {
   &__form {
     &-name {
@@ -382,6 +388,82 @@
     }
 }
 
+.fakultet {
+    &__main {
+      margin-bottom: 35px;
+      &--item {
+        padding-top: 25px;
+        padding-bottom: 25px ;
+      }
+      &--more span{
+        font-size: 16px;
+      }
+      &--enter{
+        font-size: 16px;
+      }
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 20px;
+      padding-bottom: 7px;
+      &--span {
+        max-width: 105px;
+      }
+    }
+    &__title {
+      font-size: 38px;
+      line-height: 45px;
+      &--term {
+        padding: 0 50px;
+        margin: 0 50px;
+        padding-bottom: 7px;
+         p {
+          margin-top: 5px;
+          font-size: 16px;
+         }
+         b {
+          font-size: 18px;
+         }
+      }
+      &--qualification {
+        p {
+          margin-top: 5px;
+          font-size: 16px;
+        }
+        b {
+          font-size: 18px;
+        }
+      }
+      &--admission {
+        p {
+          margin-top: 5px;
+          font-size: 16px;
+        }
+        b {
+          font-size: 18px;
+        }
+      }
+    }
+    &__partners {
+      &--wrapper {
+        img {
+          max-width: 10%;
+        }
+      }
+    }
+  }
+  .tabcontent {
+    &-second{
+      &--statistic {
+        &_second {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+
+
 }  // tablet md screen 768px
 
 
@@ -404,8 +486,8 @@
    }
    .main {
     &__item {
-      margin: 0 8px;
-      padding: 0 8px;
+      margin: 0 6px;
+      padding: 0 6px;
       padding-top: 18px;
       padding-bottom: 57px;
       a {
@@ -519,6 +601,77 @@
         }
       }
    }
+
+
+  .fakultet {
+    &__main {
+      &--item {
+        padding-top: 25px;
+        padding-bottom: 25px ;
+      }
+      &--more span{
+        font-size: 16px;
+      }
+      &--enter{
+        font-size: 16px;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 18px;
+      padding-bottom: 5px;
+      &--span {
+        max-width: 95px;
+      }
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 34px;
+      &--term {
+        padding: 0 20px;
+        margin: 0 20px;
+        padding-bottom: 7px;
+         p {
+          margin-top: 5px;
+          font-size: 14px;
+         }
+         b {
+          font-size: 16px;
+         }
+      }
+      &--qualification {
+        p {
+          margin-top: 5px;
+          font-size: 14px;
+        }
+        b {
+          font-size: 16px;
+        }
+      }
+      &--admission {
+        p {
+          margin-top: 5px;
+          font-size: 14px;
+        }
+        b {
+          font-size: 16px;
+        }
+      }
+    }
+    &__partners {
+      &--wrapper {
+        img {
+          max-width: 10%;
+        }
+      }
+    }
+    &__content {
+      &--title h2 {
+        font-size: 22px;
+      }
+    }
+  }
+
 
  }
 
@@ -686,11 +839,15 @@
     }
     .main {
       &__item {
+        // box-shadow: 0 1px 2px rgba(56, 51, 96, 0.4);
         width: 100vw;
         &:hover {
           .main__item--submenu {
             display: none;
           }
+        }
+        a {
+          font-size: 14px;
         }
       }
     }
@@ -700,10 +857,286 @@
       }
     }
     .main__item--submenu {
-      display: none !important;
+      // display: none !important;
+      position: initial;
+      bottom: 0;
+      width: 100%;
+    }
+    .main {
+       &__item {
+          &:hover {
+            .main__link{
+              text-decoration: underline !important;
+            }
+          }
+       }
+
     }
 
+    .fakultet {
+    &__main {
+      padding-top: 45px;
+      padding-bottom: 45px;
+      &--item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      &--more span{
+        font-size: 16px;
+      }
+      &--enter{
+        font-size: 16px;
+      }
+      &--buttons {
+      }
+      &--enter {
+        margin-right: 10px;
+      } 
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 14px;
+      padding-bottom: 5px;
+      &--span {
+        max-width: 74px;
+      }
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 35px;
+      &--info {
+        flex-direction: column;
+      }
+      &--term {
+        padding: 15px 0;
+        margin: 15px 0;
+        padding-bottom: 20px;
+        border: none;
+        border-top: 1px solid #f8f9fd;
+        border-bottom: 1px solid #f8f9fd;
+         p {
+          margin-top: 8px;
+          font-size: 16px;
+         }
+         b {
+          font-size: 18px;
+         }
+      }
+      &--qualification {
+        p {
+          margin-top: 8px;
+          font-size: 16px;
+        }
+        b {
+          font-size: 18px;
+        }
+      }
+      &--admission {
+        p {
+          margin-top: 8px;
+          font-size: 16px;
+        }
+        b {
+          font-size: 18px;
+        }
+      }
+    }
+    &__crumbs {
+      flex-wrap: wrap;
+      li {
+        &:last-child {
+          a {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    &__content {
+      padding: 9px;
+      padding-bottom: 35px;
+      &--title {
+       h2 {
+         font-size: 20px;
+       }
+       p {
+        font-size: 14px;
+       }
+      }
+    }
+  }
+
+  .tab {
+    button {
+      font-size: 14px;
+      padding-bottom: 13px;
+    }
+    span {
+      top: 32px;
+    }
+  }
+  .tablinks {
+    &-2 {
+      left: 165px;
+    }
+  }
+   .tabcontent {
+      &-first {
+        padding: 0;
+        padding-top: 55px;
+      }
+   }
+  
+   .tab {
+      &__qualification {
+        padding: 18px 14px 25px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__term {
+        padding: 8px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__form {
+        padding: 15px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__testing {
+        padding: 12px 14px 18px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__postponement{
+        padding: 14px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__dormitory{
+        padding: 11px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__document{
+        padding: 14px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+    }
+    &__help {
+      line-height: 22px;
+      margin-bottom: 25px;
+    }
+    &__plan {
+      padding: 16px 48px;
+      max-width: 185px;
+      display: block;
+      margin: 0 auto;
+    }
+    &__testing {
+    &-img {
+      img {
+        min-width: 20px;
+      }
+    }
+  }
+  &__form {
+    &-img {
+     img {
+      min-width: 20px;
+     }
+      }
+    }
+  &__document {
+    &-img {
+     img {
+      min-width: 20px;
+        }
+      }
+    }
+  }
+  .gallery {
+    &__title {
+      font-size: 20px;
+    }
+  }
+  .fakultet {
+      &__partners {
+        padding: 15px;
+        &--title {
+          font-size: 20px;
+        }
+      }
+    }
+
+
 }
+
+
+
 
  @media (max-width: 419.98px) {
 
@@ -943,4 +1376,315 @@
       }
     }
 
+  .fakultet {
+    &__main {
+      padding-top: 45px;
+      padding-bottom: 45px;
+      &--item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      &--more span{
+        font-size: 16px;
+      }
+      &--enter{
+        font-size: 16px;
+      }
+      &--buttons {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+      }
+      &--enter {
+        margin-bottom: 10px;
+        margin-right: 0;
+      } 
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 14px;
+      padding-bottom: 5px;
+      &--span {
+        max-width: 74px;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 35px;
+      &--info {
+        flex-direction: column;
+      }
+      &--term {
+        padding: 15px 0;
+        margin: 15px 0;
+        padding-bottom: 20px;
+        border: none;
+        border-top: 1px solid #f8f9fd;
+        border-bottom: 1px solid #f8f9fd;
+         p {
+          margin-top: 5px;
+          font-size: 14px;
+         }
+         b {
+          font-size: 16px;
+         }
+      }
+      &--qualification {
+        p {
+          margin-top: 5px;
+          font-size: 14px;
+        }
+        b {
+          font-size: 16px;
+        }
+      }
+      &--admission {
+        p {
+          margin-top: 5px;
+          font-size: 14px;
+        }
+        b {
+          font-size: 16px;
+        }
+      }
+    }
+    &__crumbs {
+      flex-wrap: wrap;
+      li {
+        &:last-child {
+          a {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    &__content {
+      padding: 9px;
+      padding-bottom: 35px;
+      &--title {
+       h2 {
+         font-size: 17px;
+       }
+       p {
+        font-size: 12px;
+       }
+      }
+    }
+  }
+  .tab {
+    button {
+      font-size: 12px;
+      padding-bottom: 13px;
+    }
+    span {
+      top: 30px;
+    }
+  }
+  .tablinks {
+    &-2 {
+      left: 115px;
+    }
+  }
+   .tabcontent {
+      &-first {
+        padding: 0;
+        padding-top: 55px;
+      }
+   }
+   .tab {
+      &__qualification {
+        padding: 18px 14px 25px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__term {
+        padding: 8px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__form {
+        padding: 15px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__testing {
+        padding: 12px 14px 18px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__postponement{
+        padding: 14px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__dormitory{
+        padding: 11px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+      }
+      &__document{
+        padding: 14px 14px 20px 14px;
+        &-img {
+          margin-right: 13px;
+        }
+        b {
+          font-size: 14px;
+          line-height: 24px;
+        } 
+        p {
+          font-size: 13px;
+          line-height: 24px;
+        }
+    }
+    &__help {
+      line-height: 22px;
+      margin-bottom: 25px;
+    }
+    &__plan {
+      padding: 16px 48px;
+      max-width: 185px;
+      display: block;
+      margin: 0 auto;
+    }
+    &__testing {
+    &-img {
+      img {
+        min-width: 20px;
+      }
+    }
+  }
+  &__form {
+    &-img {
+     img {
+      min-width: 20px;
+     }
+      }
+    }
+  &__document {
+    &-img {
+     img {
+      min-width: 20px;
+        }
+      }
+    }
+  }
+  .gallery {
+    &__title {
+      font-size: 20px;
+    }
+  }
+  .fakultet {
+      &__partners {
+        padding: 15px;
+        &--title {
+          font-size: 20px;
+        }
+      }
+    }
+    .tabcontent-second table thead th:nth-child(3) {
+      white-space: nowrap;
+    }
+    .tabcontent-second table tbody tr td:nth-child(1) {
+      padding-left: 10px;
+      padding-right: 15px;
+         white-space: nowrap;
+         font-size: 13px;
+         max-width: none;
+    }
+    .tabcontent-second table tbody tr td:nth-child(2) {
+         white-space: nowrap;
+         font-size: 13px;
+         max-width: none;
+    }
+    .tabcontent-second table tbody tr td:nth-child(3) {
+         white-space: nowrap;
+         font-size: 13px;
+         max-width: none;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 623.98px) {
+  .footer{
+    &__special {
+      &--link {
+        &:first-child {
+          white-space: normal;
+        }
+      }
+    }
+    &__contacts {
+      flex-direction: column;
+      &--button {
+        margin-left: 0;
+        margin-top: 10px;
+        max-width: 182px;
+        
+      }
+    }
+  }
 }

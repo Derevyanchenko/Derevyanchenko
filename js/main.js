@@ -226,29 +226,65 @@ $(document).ready(function(){
     $('.menu__toggle').toggleClass('menu__toggle-active');
   });
 
-    $(".main__item-1").hover(function() {
-            $(".main__item--submenu-1").slideToggle(300);
+    if($(window).width() > 577 ){
+          console.log("true");
+          $(".main__item-1").hover(function() {
+            $(".main__item--submenu-1").fadeToggle(50);
           });
           $(".main__item-2").hover(function() {
-            $(".main__item--submenu-2").slideToggle(300);
+            $(".main__item--submenu-2").fadeToggle(50);
           });
           $(".main__item-3").hover(function() {
-            $(".main__item--submenu-3").slideToggle(300);
+            $(".main__item--submenu-3").fadeToggle(50);
           });
           $(".main__item-4").hover(function() {
-            $(".main__item--submenu-4").slideToggle(300);
+            $(".main__item--submenu-4").fadeToggle(50);
           });
           $(".main__item-5").hover(function() {
-            $(".main__item--submenu-5").slideToggle(300);
+            $(".main__item--submenu-5").fadeToggle(50);
           });
           $(".main__item-6").hover(function() {
-            $(".main__item--submenu-6").slideToggle(300);
+            $(".main__item--submenu-6").fadeToggle(50);
           });
+      }
+      else {
+        console.log("false");
+          $(".main__item-1").hover(function() {
+            $(".main__item--submenu-1").slideToggle(250);
+          });
+          $(".main__item-2").hover(function() {
+            $(".main__item--submenu-2").slideToggle(250);
+          });
+          $(".main__item-3").hover(function() {
+            $(".main__item--submenu-3").slideToggle(250);
+          });
+          $(".main__item-4").hover(function() {
+            $(".main__item--submenu-4").slideToggle(250);
+          });
+          $(".main__item-5").hover(function() {
+            $(".main__item--submenu-5").slideToggle(250);
+          });
+          $(".main__item-6").hover(function() {
+            $(".main__item--submenu-6").slideToggle(250);
+          });
+      }
+});
 
- });
 
- $(window).resize(function() {
-         if($(window).width() < 577 ){
-             $(".main__item--submenu").css("display", "none");
-         }
-       });
+function fakultet(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
