@@ -2628,8 +2628,28 @@ h6 {
     font-size: 18px;
   }
 
+  .fakultet__partners--wrapper {
+    margin-top: 0px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .fakultet__partners--wrapper div {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+
   .fakultet__partners--wrapper img {
-    max-width: 10%;
+    max-width: 100%;
   }
 
   .tabcontent-second--statistic_second {
@@ -2851,8 +2871,28 @@ h6 {
     font-size: 16px;
   }
 
+  .fakultet__partners--wrapper {
+    margin-top: 0px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .fakultet__partners--wrapper div {
+    margin-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+
   .fakultet__partners--wrapper img {
-    max-width: 10%;
+    max-width: 100%;
   }
 
   .fakultet__content--title h2 {
@@ -3355,11 +3395,16 @@ h6 {
   }
 
   .fakultet__partners {
-    padding: 15px;
+    padding: 0;
+    padding: 30px 15px;
   }
 
   .fakultet__partners--title {
     font-size: 20px;
+  }
+
+  .tabcontent-second table tbody tr td:nth-child(1) {
+    max-width: none;
   }
 }
 
@@ -3917,8 +3962,28 @@ h6 {
     font-size: 20px;
   }
 
-  .fakultet__partners {
-    padding: 15px;
+  .fakultet__partners--wrapper {
+    margin-top: 0px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .fakultet__partners--wrapper div {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .fakultet__partners--wrapper img {
+    max-width: 100%;
   }
 
   .fakultet__partners--title {
@@ -3954,6 +4019,32 @@ h6 {
   table {
     overflow-x: auto;
     display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tabcontent-second table thead th:nth-child(3) {
+    white-space: nowrap;
+  }
+
+  .tabcontent-second table tbody tr td:nth-child(1) {
+    padding-left: 10px;
+    padding-right: 15px;
+    white-space: nowrap;
+    font-size: 13px;
+    max-width: none;
+  }
+
+  .tabcontent-second table tbody tr td:nth-child(2) {
+    white-space: nowrap;
+    font-size: 13px;
+    max-width: none;
+  }
+
+  .tabcontent-second table tbody tr td:nth-child(3) {
+    white-space: nowrap;
+    font-size: 13px;
+    max-width: none;
   }
 }
 

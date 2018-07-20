@@ -446,8 +446,17 @@
     }
     &__partners {
       &--wrapper {
+        margin-top: 0px;
+        flex-wrap: wrap;
+        div {
+          margin-top: 25px;
+          display: flex;
+          justify-content: center;
+          flex: 0 0 33%;
+          max-width: 33%;
+        }
         img {
-          max-width: 10%;
+          max-width: 100%;
         }
       }
     }
@@ -659,9 +668,18 @@
       }
     }
     &__partners {
-      &--wrapper {
+       &--wrapper {
+        margin-top: 0px;
+        flex-wrap: wrap;
+        div {
+          margin-top: 25px;
+          display: flex;
+          justify-content: center;
+          flex: 0 0 33%;
+          max-width: 33%;
+        }
         img {
-          max-width: 10%;
+          max-width: 100%;
         }
       }
     }
@@ -1125,11 +1143,17 @@
   }
   .fakultet {
       &__partners {
-        padding: 15px;
+        padding: 0;
+        padding: 30px 15px;
+
         &--title {
           font-size: 20px;
         }
       }
+    }
+
+    .tabcontent-second table tbody tr td:nth-child(1) { 
+      max-width: none;
     }
 
 
@@ -1632,7 +1656,20 @@
   }
   .fakultet {
       &__partners {
-        padding: 15px;
+        &--wrapper {
+        margin-top: 0px;
+        flex-wrap: wrap;
+        div {
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
         &--title {
           font-size: 20px;
         }
@@ -1666,6 +1703,29 @@
     overflow-x: auto;
     display: block;
   }
+}
+
+@media screen and (max-width: 480px) { 
+    .tabcontent-second table thead th:nth-child(3) {
+      white-space: nowrap;
+    }
+    .tabcontent-second table tbody tr td:nth-child(1) {
+      padding-left: 10px;
+      padding-right: 15px;
+         white-space: nowrap;
+         font-size: 13px;
+         max-width: none;
+    }
+    .tabcontent-second table tbody tr td:nth-child(2) {
+         white-space: nowrap;
+         font-size: 13px;
+         max-width: none;
+    }
+    .tabcontent-second table tbody tr td:nth-child(3) {
+         white-space: nowrap;
+         font-size: 13px;
+         max-width: none;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 623.98px) {
